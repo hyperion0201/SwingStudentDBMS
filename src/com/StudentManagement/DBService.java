@@ -108,6 +108,7 @@ public class DBService{
             PreparedStatement pst = connection.prepareStatement(insertSql);
             pst.setInt(1, id);
             pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Delete successfully!");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -126,8 +127,5 @@ public class DBService{
             JOptionPane.showMessageDialog(null, "Error when import data from CSV!", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
-    }
-    public static void main(String[] args) {
-        var db = new DBService();
     }
 }

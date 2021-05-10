@@ -312,5 +312,6 @@ class MainFrame extends JFrame implements ActionListener{
     
     private void _readCSV() {
         dbService.importFromCSV();
+        _refreshTable();
     }
 }
